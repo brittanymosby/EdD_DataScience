@@ -7,7 +7,7 @@ You should have R and RStudio installed prior to the first day of class. Instruc
 ### Async .Rmd Files
 These are the RStudio files you will use in tandem with the async videos each week.
 1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/College.Rdata)
-2. [Week 2 - Conditional Means](./scripts/02-condition_means.Rmd)
+2. Week 2 - [Conditional Means](./scripts/02-condition_means.Rmd)
 
 ### Async PowerPoint Files
 1. Week 1 - [Welcome](./slides/01_01_welcome.pptx)
