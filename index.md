@@ -1,14 +1,6 @@
-## Welcome to Data Science
+## Welcome to Data Science, Spring 2021
 
-In this GitHub Repository you will find all the files you need for this term of Data Science (LLO8200). We'll talk more about this in class, but this will get you started. Over the course of the term, I may update assignments/code/etc... so please alert me if you're going to be working ahead. If you work ahead and then things change, you will be responsible for updating your work.
-
-You can use the [editor on GitHub](./slides/01_01_welcome.pptx) to maintain and preview the content for your website in Markdown files.
-
-you can [get the PDF]({{https://github.com/brittanymosby/edd_datascience}}/slides/01_01_welcome.pptx) directly.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Assignments
+Make sure you check this page frequently for the most up-to-date files to use for both async and assignments. Over the course of the term code may be optimized or corrected, so please alert me if you’re going to be working ahead. If you work ahead and then things change, _you will be responsible for updating your work._
 
 
 ### Async .Rmd Files
@@ -24,6 +16,13 @@ These will download as .Rmd files in your Downloads folder.
 
 
 ### Async PowerPoint Files
-[Week 1 - Welcome](./slides/01_01_welcome.pptx)
+1. [Week 1 - Welcome](./slides/01_01_welcome.pptx)
+2. [Week 2 - Conditional Means](./slides/02_01_conditional_mean.pptx)
 
-[Week 2 - Conditional Means](./slides/02_01_conditional_mean.pptx)
+
+### Assignments
+Each assignment (problem set) is worth 100 points. The problem sets are due on the Sunday prior to the following week’s live session. All assignment submissions must be in “knitted” format:  html, doc, or pdf. There may be a penalty for submissions not meeting this requirement.
+
+| File      | Due Date          |
+|:-------------|:------------------|
+| [Assignment 1](./assignments/01-assignment.md) | Sunday 1/17, 12 noon (CT) |
