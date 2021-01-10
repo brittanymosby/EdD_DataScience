@@ -8,16 +8,13 @@ These will download as .Rmd files in your Downloads folder.
 
 1. [Week 1 - Introduction](./scripts/01-intro.Rmd)
 2. [Week 2 - Conditional Means](./scripts/02-condition_means.Rmd)
-3. [Week 3 - Plot Means](./scripts/03-plot_means.Rmd)
-4. [Week 4 - Flat Data](./scripts/04-flat_data.Rmd)
-5. [Week 5 - Regression](./scripts/05-regression.Rmd)
-6. [Week 6 - Scatterplots](./scripts/06-scatterplots.Rmd)
-7. [Week 7 - Webscraping](./scripts/07-webscraping.Rmd)
+
 
 
 ### Async PowerPoint Files
 1. [Week 1 - Welcome](./slides/01_01_welcome.pptx)
-2. [Week 2 - Conditional Means](./slides/02_01_conditional_mean.pptx)
+2. Week 2 - [Conditional Means](./slides/02_01_conditional_mean.pptx), [Logic of Prediction](./slides/02_05_logic_of_prediction.pptx), [Mean Squared Error](./slides/02_06_MSE.pptx)
+3. Week 3 - [Plot Means](./scripts/03_01_plot_means.Rmd)
 
 
 ### Assignments
