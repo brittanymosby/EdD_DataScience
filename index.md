@@ -12,7 +12,7 @@ These will download as .Rmd files in your Downloads folder.
 
 
 ### Async PowerPoint Files
-1. [Week 1 - Welcome](./slides/01_01_welcome.pptx)
+1. Week 1 - [Welcome](./slides/01_01_welcome.pptx)
 2. Week 2 - [Conditional Means](./slides/02_01_conditional_mean.pptx), [Logic of Prediction](./slides/02_05_logic_of_prediction.pptx), [Mean Squared Error](./slides/02_06_MSE.pptx)
 3. Week 3 - [Plot Means](./scripts/03_01_plot_means.Rmd)
 
