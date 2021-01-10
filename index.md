@@ -14,7 +14,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Async .Rmd Files
 These will download as .Rmd files in your Downloads folder.
 
-[Week 1 - Introduction](./assignments/01-intro.RMD)
+[Week 1 - Introduction](./scripts/01-intro.RMD)
 
 ### Async PowerPoint Files
 [Week 1 - Welcome](./slides/01_01_welcome.pptx)
