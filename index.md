@@ -4,7 +4,7 @@ In this GitHub Repository you will find all the files you need for this term of 
 
 You can use the [editor on GitHub](./blob/master/slides/01_01_welcome.pptx) to maintain and preview the content for your website in Markdown files.
 
-you can [get the PDF]({{https://brittanymosby.github.io/edd_datascience}}/slides/01_01_welcome.pptx) directly.
+you can [get the PDF]({{https://github.com/brittanymosby/edd_datascience}}/slides/01_01_welcome.pptx) directly.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
