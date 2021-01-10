@@ -10,7 +10,7 @@ These are the RStudio files and datasets that you will use in tandem with the as
 #### Known Bugs/Issue in Async Lecture
 | Week  | Issue  |
 |:------|:-------|
-|Week 1| The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%. |
+| Week 1 | The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%. |
 
 ### Async Lecture Slides
 1. Week 1 - [Welcome](./slides/01_01_welcome.pptx)
