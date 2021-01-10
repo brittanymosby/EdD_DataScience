@@ -4,7 +4,7 @@ This is a supplementary page for Professor Mosby's section of LLO 8200 Introduct
 
 ### Async Lecture RStudio (.Rmd) Files
 These are the RStudio files and datasets that you will use in tandem with the async videos each week.
-1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/College.Rdata)
+1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/college.Rdata)
 2. Week 2 - [Conditional Means](./scripts/02-condition_means.Rmd)
 
 ### Async Lecture Slides
