@@ -7,6 +7,8 @@ These are the RStudio files and datasets that you will use in tandem with the as
 1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/college.Rdata)
 2. Week 2 - [Conditional Means](./scripts/02-condition_means.Rmd)
 
+### Known Bugs/Issue in Async Lecture Code
+
 ### Async Lecture Slides
 1. Week 1 - [Welcome](./slides/01_01_welcome.pptx)
 2. Week 2 - [Conditional Means](./slides/02_01_conditional_mean.pptx), [Logic of Prediction](./slides/02_05_logic_of_prediction.pptx), [Mean Squared Error](./slides/02_06_MSE.pptx)
