@@ -1,6 +1,6 @@
 ## Welcome to Data Science, Spring 2021
 
-Make sure you check this page frequently for the most up-to-date files to use for both async and assignments. Over the course of the term code may be optimized or corrected, so please alert me if you’re going to be working ahead. If you work ahead and then things change, _you will be responsible for updating your work._
+Make sure you check this page frequently for the most up-to-date files to use for both async and assignments. Over the course of the term code may be optimized or corrected, so please alert me if you’re going to be working ahead. (_If you do work ahead, you will be responsible for updating your work if the assignments are updated._)
 
 
 ### Async .Rmd Files
