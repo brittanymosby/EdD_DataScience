@@ -14,7 +14,14 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Async .Rmd Files
 These will download as .Rmd files in your Downloads folder.
 
-[Week 1 - Introduction](./scripts/01-intro.RMD)
+1. [Week 1 - Introduction](./scripts/01-intro.Rmd)
+2. [Week 2 - Conditional Means](./scripts/02-condition_means.Rmd)
+3. [Week 3 - Plot Means](./scripts/03-plot_means.Rmd)
+4. [Week 4 - Flat Data](./scripts/04-flat_data.Rmd)
+5. [Week 5 - Regression](./scripts/05-regression.Rmd)
+6. [Week 6 - Scatterplots](./scripts/06-scatterplots.Rmd)
+7. [Week 7 - Webscraping](./scripts/07-webscraping.Rmd)
+
 
 ### Async PowerPoint Files
 [Week 1 - Welcome](./slides/01_01_welcome.pptx)
