@@ -5,16 +5,10 @@ This is a supplementary page for Professor Mosby's section of LLO 8200 Introduct
 ### Async Lecture RStudio (.Rmd) Files
 These are the RStudio files and datasets that you will use in tandem with the async videos each week.
 1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/college.Rdata)
-2. Week 2 - [Conditional Means](./scripts/02-conditional_means.Rmd) - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
+2. Week 2 - [Conditional Means](./scripts/02-conditional_means.Rmd), [Student Debt datafile](./scripts/sc_debt.Rdata) - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
 
 #### Known Bugs/Issue in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
-
-### Async Lecture Slides
-1. Week 1 - [Welcome](./slides/01_01_welcome.pptx)
-2. Week 2 - [Conditional Means](./slides/02_01_conditional_mean.pptx), [Logic of Prediction](./slides/02_05_logic_of_prediction.pptx), [Mean Squared Error](./slides/02_06_MSE.pptx)
-3. Week 3 - [Plot Means](./scripts/03_01_plot_means.Rmd)
-
 
 ### Assignments
 Each assignment (problem set) is worth 100 points. The problem sets are due on the Sunday prior to the following week’s live session. All assignment submissions must be in “knitted” format:  html, doc, or pdf. There may be a penalty for submissions not meeting this requirement.
