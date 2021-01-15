@@ -3,7 +3,7 @@
 output: html_document
 ---
   
-  ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -19,7 +19,7 @@ elements:
 
 
 
-2. R output that summarizes one of the variables in the colllege.Rdata
+2. R output that summarizes one of the variables in the college.Rdata
 dataset
 
 

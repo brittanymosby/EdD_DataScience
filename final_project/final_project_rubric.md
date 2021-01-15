@@ -10,7 +10,7 @@ There are five major areas to the final project:
 
 ## Data Analysis
 
-A strong (A) data analysis will use at least two of the four algorithms (conditional means, regression, logistic regression, k-means clustering) that we discussed in class. The data analysis will include a measure of model fit and will describe which characeristics are closely related to the outcome. The analysis will include cross-validation, which will be correctly exectued and described. 
+A strong (A) data analysis will use at least two of the four algorithms (conditional means, regression, logistic regression, k-means clustering) that we discussed in class. The data analysis will include a measure of model fit and will describe which characteristics are closely related to the outcome. The analysis will include cross-validation, which will be correctly executed and described. 
 
 An acceptable data analysis will include two algorithms, but there may be some mistakes or inaccuracies in how the results are presented. A cross-validation will be included, but may not be correctly done. 
 
@@ -34,11 +34,12 @@ A weak (C) final project will be poorly written, with many mistakes regarding bo
 
 ## Organization, Clarity, Formatting
 
-A strong (A) paper will have a `.Rmd` file that generates a very nicely formatted document, suitable for professional presentation. What kind of report would you want to give to a supervisor? That's what I want back from you. The orgnaization should be very clear and easy to understand. 
+A strong (A) paper will have a `.Rmd` file that generates a very nicely formatted document, suitable for professional presentation. What kind of report would you want to give to a supervisor? That's what I want back from you. The organization should be very clear and easy to understand. 
 
 An acceptable (B) paper will have some formatting problems and may not look very nice. 
 
 A weak (C) paper will include code chunks, poor formatting, and will just be messy. 
+
 ## Coding
 
 A strong (A) paper will have code that can generate results from the raw data in an easy to understand way. The code will be commented and will run on my computer without me having to tweak it in any way. (Easy test is to knit the document, with all related files in same directory)

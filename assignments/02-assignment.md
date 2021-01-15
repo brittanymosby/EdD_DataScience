@@ -8,7 +8,7 @@ For this assignment, you'll be working with the county level dataset to predict 
 3. Calculate a summary measure of the errors for each observation---the difference between your prediction and the outcome. 
 4. Calculate the mean of the outcome at levels of a predictor variable.  
 5. Use these conditional means as a prediction: for every county, use the conditional mean to provide a ''best guess'' as to that county's level of the outcome.  
-6. Calculate a summary measureof the error in your predictions.
+6. Calculate a summary measure of the error in your predictions.
 
 
 Submit your assignment as `assignment2_<yourlastname>.Rmd`, where `<yourlastname>` is your last name. (By the way, any time you see this: `<sometext>`, that indicates that you need to substitute something in, so if I were to submit the above assignment, it would be as: `assignment2_doyle.Rmd`)
