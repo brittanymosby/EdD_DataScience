@@ -5,7 +5,7 @@ This is a supplementary page for Professor Mosby's section of LLO 8200 Introduct
 ### Async Lecture RStudio (.Rmd) Files
 These are the RStudio files and datasets that you will use in tandem with the async videos each week.
 1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/college.Rdata)
-2. Week 2 - [Conditional Means](./scripts/02-conditional_means.Rmd), [Student Debt datafile](./scripts/sc_debt.Rdata) - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
+2. Week 2 - [Conditional Means](./scripts/02_conditional_means.Rmd), [Student Debt datafile](./scripts/sc_debt.Rdata) - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
 
 #### Known Bugs/Issue in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
