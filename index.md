@@ -16,4 +16,4 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | File      | Due Date          |
 |:-------------|:------------------|
 | [Assignment 1](./assignments/01-assignment.Rmd) | Sunday 1/17, 12 noon (CT) |
-| [Assignment 2](./assignments/02-assignment.Rmd), [County datafile](./scripts/pd.Rdata) | Tuesday 1/26, 12 noon (CT) |
+| [Assignment 2](./assignments/02-assignment.Rmd), [County datafile](./scripts/pd.Rdata), [Codebook](./assignments/pd_codebook.Rdata) | Tuesday 1/26, 12 noon (CT) |
