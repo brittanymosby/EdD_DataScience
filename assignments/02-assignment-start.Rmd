@@ -1,0 +1,62 @@
+---
+title: "LLO 8200 Assignment 2"
+author: "Your Name Here"
+date: "Enter Date"
+output: html_document
+---
+
+For this assignment, you'll be working with a county-level dataset (`pd.Rdata`) to predict home ownership rates using conditional means. You'll need to select the county-level characteristics that you think might be related to home ownership rates. I have inserted R code chunks for you below; however, in future assignments I won't do this step for you. 
+
+I expect that the `.Rmd` file you submit will run cleanly, and that there shouldn't be any errors. Use LOTS of comments to tell me what you are doing. Also, please update the "author" in the header to be you. Finally, identify the students with whom you worked (there is a space for this at the end of the assignment). 
+
+
+```{r setup}
+#Add the libraries and data you will need for this assignment. Be sure your data and .Rmd files are saved in the same folder on your computer. 
+
+library(tidyverse)
+load("pd.Rdata")
+
+```
+
+
+
+1. Calculate the mean of the outcome: `homeown_rate`.
+```{r}
+
+```
+
+2. Use your mean as a prediction: Create a new variable that consists of the mean of the outcome.
+```{r}
+
+```
+
+3. Calculate a summary measure (the RMSE) of the errors for each observation---the difference between your prediction and the outcome. 
+```{r}
+
+```
+
+4. Calculate the mean of the outcome at levels of a predictor variable *of your choosing* (make sure it makes sense as a predictor for home ownership).  
+```{r}
+
+```
+
+5. Use these conditional means as a prediction: for every county, use the conditional mean to provide a "best guess" as to that county's level of the outcome.  
+```{r}
+
+```
+
+6. Calculate a summary measure of the error (RMSE) in your predictions.
+```{r}
+
+```
+
+7. Did your prediction improve? How do you know whether or not it improved? 
+
+
+
+
+
+###Please list any classmates you worked with on this assignment (maximum of three partners):
+
+
+
