@@ -8,7 +8,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 2. Week 2 - [Conditional Means](./scripts/02_conditional_means.Rmd), [Student Debt datafile](./scripts/sc_debt.Rdata)
   - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
 3. Week 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
-4. Week 4 - [Getting Data: Flat Files and Tidy Data)(./scripts/04-flat_data.Rmd)
+4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
 
 ### Known Bugs/Issues in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
