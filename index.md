@@ -26,5 +26,5 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 ## RStudio Reference Guides
 A non-exhaustive list of some of my favorite cheat sheets and guides for RStudio
 - [R Markdown Reference Guide](./assets/rmarkdown-reference.pdf)
-- [ggplot2 Cheat Sheet](./assests/ggplot2-cheatsheet.pdf)
-- [Colors and Palettes in R](./assests/colorPaletteCheatsheet.pdf)
+- [ggplot2 Cheat Sheet](./assets/ggplot2-cheatsheet.pdf)
+- [Colors and Palettes in R](./assets/colorPaletteCheatsheet.pdf)
