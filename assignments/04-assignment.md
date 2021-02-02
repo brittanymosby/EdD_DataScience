@@ -1,7 +1,7 @@
 Assignment 4
 ---------------
 
-For this assignment, you'll need to open up, clean and save the following datasets, using the tools we've gone over in class. For each dataset, make sure that when you're done you have a nice, neatly labeled dataset that would be easy for you or another analyst to open and analyze. Save the result in an `RData` file using the names provided. You need to turn in an R script named `04-assignment_<lastname>.Rmd` that cleanly creates all of the datasets requested (lower case only for your last name, please).  
+For this assignment, you'll need to open up, clean and save the following datasets, using the tools we've gone over in class. For each dataset, make sure that when you're done you have a nice, neatly labeled dataset that would be easy for you or another analyst to open and analyze. Save the result in an `RData` file using the names provided. You need to turn in an R script named `04-assignment_<lastname>.Rmd` that cleanly creates all of the datasets requested (no HTML file this week).  
 
 1. Panel data for OECD countries. Save as file name `oecd.RData` [http://www.wiley.com/legacy/wileychi/baltagi/supp/Gasoline.dat](http://www.wiley.com/legacy/wileychi/baltagi/supp/Gasoline.dat)
 
