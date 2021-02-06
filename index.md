@@ -10,6 +10,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 3. Week 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
 4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
   - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement)
+5. Week 5 - [Using Regression for Prediction](./scripts/05-regression) (*Note, you may want to review notes from Applied Stats on correlation and regression.*)
 
 ### Known Bugs/Issues in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
@@ -24,9 +25,11 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | [Assignment 2](./assignments/02-assignment.Rmd) | Tuesday 1/26, 12 noon (CT) |
 | [Assignment 3](./assignments/03-assignment.md) | Tuesday 2/2, 12 noon (CT) |
 | [Assignment 4](./assignments/04-assignment.md) | Tuesday 2/9, 12 noon (CT) |
+| [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16. 12 noon (CT) |
 
 ## RStudio Reference Guides
 A non-exhaustive list of some of my favorite cheat sheets and guides for RStudio
 - [R Markdown Reference Guide](./assets/rmarkdown-reference.pdf)
 - [ggplot2 Cheat Sheet](./assets/ggplot2-cheatsheet.pdf)
+- [Wickam book on `ggplot2`](https://ggplot2-book.org/)
 - [Colors and Palettes in R](./assets/colorPaletteCheatsheet.pdf)
