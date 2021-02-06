@@ -88,18 +88,22 @@ download.file("http://nces.ed.gov/programs/digest/d14/tables/xls/tabn302.10.xls"
 
 newxl<-read_excel("newxl.xls",skip=6,col_names=FALSE)
 
-#Get ride of empty rows and unneeded columns.
+#Get rid of empty rows and unneeded columns.
+newxl<-newxl%>%filter(is.na(...1)==FALSE)
+
 newxl<-newxl[1:54,]
 newxl<-newxl[ ,-(c(3,5,7,9,11,13,15,17,19,21,23,25))]
+
 
 #Add useful names to the columns.
 names(newxl)<-c("year", "hscomptotal", "hscompmales","hscompfemales","incollegetotal","total2y","total4y",  "collegetotalmales", "males2y",  "males4y", "collegetotalfemales",  "females2y",  "females4y")
 
+
 #Change the year variable into a format that R can understand and drop the old one.
 yeardate = seq(from = as.Date("1960-01-01"), to = as.Date("2013-01-01"), by = 'year')
 
-newxl2<-cbind(newxl,yeardate)
-newxl2<-newxl2[,-1]
+newxl2<-cbind(yeardate, newxl)
+newxl2<-newxl2[,-2]
 
 head(newxl2)
 ```
