@@ -9,9 +9,11 @@ These are the RStudio files and datasets that you will use in tandem with the As
   - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
 3. Week 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
 4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
+  - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement)
 
 ### Known Bugs/Issues in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
+- Week 4 - Please see above for supplementary material to fix issues with the Excel file download in async
 
 ## Assignments
 Each assignment (problem set) is worth 100 points. The problem sets are due on the Sunday prior to the following week’s live session. All assignment submissions must include both the .Rmd file and a knitted file (html, doc, or pdf). There may be a penalty for submissions not meeting this requirement.
