@@ -1,0 +1,83 @@
+
+title: "Reading Zipped Data"
+author: "BL Mosby"
+date: "2/3/2021"
+output: html_document
+
+
+```{r} 
+library(tidyverse)
+library(haven)
+library(readxl)
+```
+
+## Zipped Files
+Some data files that are very large are compressed into a zipped file (along with codebooks or other metadata files). These take a two step process, where you must also know the name of the data file within the zipped folder.
+
+```{r}
+#creating a temporary file to hold the zipped folder
+temp <- tempfile()
+
+#downloading the zipped folder from the data source webpage, and unzipping the SPSS data file
+download.file("https://gss.norc.org/Documents/spss/GSS_2014_Merged_SPSS.zip", temp)
+unzip(temp, "gss2014merged_r10 - spss.sav")
+
+#reading in the spss command and closing the connection
+data<-read_spss("gss2014merged_r10 - spss.sav")
+unlink(temp)
+
+```
+
+## Excel
+```{r}
+## Web page: 
+##http://nces.ed.gov/programs/digest/d14/tables/dt14_204.10.asp
+
+if(file.exists("free.xls")==FALSE){
+  download.file("http://nces.ed.gov/programs/digest/d14/tables/xls/tabn204.10.xls",destfile="free.xls")
+free<-read_excel("free.xls",skip=4,col_names=FALSE)  
+}else{
+  free<-read_excel("free.xls",skip=4,col_names=FALSE)
+}
+
+head(free)
+```
+
+```{r}
+# Now need to clean up 
+#Get rid of unwanted columns
+
+free2<-free[ ,-(c(3,6,9,12,15,18))]
+
+#Get rid of unwanted rows
+free2<-free2%>%filter(is.na(...1)==FALSE)
+```
+
+Now we're going to select some things we DO want, by using the `number_1:number_x` setup. 
+
+```{r}
+##50 states plus dc only
+free2<-free2[2:52,]
+
+head(free2)
+
+tail(free2)
+```
+
+Okay, this is looking better. Let's add some nice column names. 
+
+```{r}
+names(free2)<-c("state",
+                "total_2000",
+                "total_2010",
+                "total_2011",
+                "total_2012",
+                "frl_2000",
+                "frl_2010",
+                "frl_2011",
+                "frl_2012",
+                "pc_frl_2000",
+                "pc_frl_2010",
+                "pc_frl_2011",
+                "pc_frl_2012")
+```

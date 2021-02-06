@@ -1,0 +1,113 @@
+---
+title: "Week 4 Supplement"
+author: "BL Mosby"
+date: "2/6/2021"
+output: html_document
+---
+
+```{r} 
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
+
+library(tidyverse)
+library(haven)
+library(readxl)
+
+```
+
+
+## Correction to the Excel download from Async
+Here are a few tweaks to the async code for the Excel file download that may run a bit smoother:
+```{r}
+## Web page: 
+##http://nces.ed.gov/programs/digest/d14/tables/dt14_204.10.asp
+
+#If you have been getting an error with the download, add the mode argument (which directs RStudio to download as a binary file).
+if(file.exists("free.xls")==FALSE){
+  download.file("http://nces.ed.gov/programs/digest/d14/tables/xls/tabn204.10.xls",destfile="free.xls", mode="wb")
+free<-read_excel("free.xls",skip=4,col_names=FALSE)  
+}else{
+  free<-read_excel("free.xls",skip=4,col_names=FALSE)
+}
+
+head(free)
+```
+
+Next, to get rid of the empty rows and columns, you may need to adjust the column names to match what's in your dataframe.
+```{r}
+# Now need to clean up 
+#Get rid of unwanted columns
+
+free2<-free[ ,-(c(3,6,9,12,15,18))]
+
+#Get rid of unwanted rows-- My column titles are "...1" so I will change the is.na argument to reflect that:
+free2<-free2%>%filter(is.na(...1)==FALSE)
+```
+The rest of the code chunks for the Excel download should work as is.
+
+
+---
+
+## Zipped Files
+Some data files that are very large are compressed into a zipped file (along with codebooks or other metadata files). These take a two step process, where you must also know the name of the data file within the zipped folder.
+
+```{r}
+#creating a temporary file to hold the zipped folder
+temp <- tempfile()
+
+#downloading the zipped folder from the data source webpage, and unzipping the SPSS data file
+download.file("https://gss.norc.org/Documents/spss/GSS_2014_Merged_SPSS.zip", temp)
+unzip(temp, "gss2014merged_r10 - spss.sav")
+
+#reading in the spss command and closing the connection
+gss14<-read_spss("gss2014merged_r10 - spss.sav")
+unlink(temp)
+
+head(gss14)
+
+```
+
+
+## Homework 4 Exercises
+For Assignment 4, replace #2 and #3 with the following:
+
+2. U.S. National Election Survey data from 2004. Save as file name `nes.RData`. [https://osf.io/zpuhd/download]("https://osf.io/zpuhd/download")
+
+3. General Social Survey (GSS), pick any of the individual year datasets (1972 - 2018). Save as file name `gss<year>.Rdata`. Note this will be an SPSS file within a zipped file, and you will need to use the code above.
+[https://gss.norc.org/get-the-data/spss](https://gss.norc.org/get-the-data/spss).
+
+
+## Extra Excel data
+My code for the additional Excel dataset from async. (Note, there is more than one correct way to go about cleaning the data.)
+```{r}
+## Web page: 
+##http://nces.ed.gov/programs/digest/d14/tables/dt14_204.10.asp
+
+download.file("http://nces.ed.gov/programs/digest/d14/tables/xls/tabn302.10.xls",destfile="newxl.xls", mode="wb")
+
+newxl<-read_excel("newxl.xls",skip=6,col_names=FALSE)
+
+#Get ride of empty rows and unneeded columns.
+newxl<-newxl[1:54,]
+newxl<-newxl[ ,-(c(3,5,7,9,11,13,15,17,19,21,23,25))]
+
+#Add useful names to the columns.
+names(newxl)<-c("year", "hscomptotal", "hscompmales","hscompfemales","incollegetotal","total2y","total4y",  "collegetotalmales", "males2y",  "males4y", "collegetotalfemales",  "females2y",  "females4y")
+
+#Change the year variable into a format that R can understand and drop the old one.
+yeardate = seq(from = as.Date("1960-01-01"), to = as.Date("2013-01-01"), by = 'year')
+
+newxl2<-cbind(newxl,yeardate)
+newxl2<-newxl2[,-1]
+
+head(newxl2)
+```
+
+This was just a graph I did for fun, to visualize one of the variables.
+```{r}
+gg<-ggplot(newxl2, aes(x=yeardate, y=incollegetotal))
+gg<-gg+geom_point()
+gg
+```
+

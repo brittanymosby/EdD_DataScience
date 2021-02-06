@@ -1,0 +1,54 @@
+```{r}
+## REMOVE THIS CHUNK BEFORE BEGINNING!!!! 
+##The --- in your header should be on line 1 of this Rmd file
+```
+---
+title: "Some Additional Helpful Code for Assignment 2 - Ntiles"
+author: "Lacey Hartigan"
+date: "1/21/21"
+output: pdf_document
+---
+
+I'm going to go ahead and open the libraries I'm going to need first off. That way I know I did it. 
+```{r}
+library(yardstick)
+library(tidyverse)
+```
+
+For this week's assignment, you're going to use the pd data. Some of you might be getting a weird error message with the readRDS function, even when you KNOW you have your working directory set properly. If this is the case, just use the load function instead like I do here. 
+
+```{r}
+load("pd.Rdata")
+```
+
+So, in class, we talked about creating conditional means. That was pretty easy because we had categorical predictor (independent) variables, like school type (private/public) and region. In THIS dataset, everything is numeric! We don't have anything categorical, which is really going to make our conditional means somewhat meaningless. 
+
+SO - what we can do, to look at our data in another way, is to chunk our predictor variable(s) into categories. In this example I'm going to show you how to do that using the `ntile` function. What this does is it allows you to break a continuous variable into percentiles (quartiles, deciles, etc. etc.). 
+
+Let's say I'm interested in using the percent of female residents in a county to see if maybe that has some bearing on the outcome (homeownership rate). First, I'm going to look at my `female_pc` variable. If I use the `table` function that will give me a frequency table showing me all the different values for this variable. 
+```{r}
+table(pd$female_pc)
+```
+There are a LOT of options, ranging from 29.9% up to 57% (remember - this is county-level data). So, instead of trying to include EVER option, what if I just break this up into quintiles (5 groups). Where my first group would be the lowest 20% of the distribution, then next is the next 20% of the distribution, and so on and so forth. 
+
+Here's how I create that 5-group variable (and add it to my dataset):
+```{r}
+pd<- pd%>%
+  mutate(female_pc_quint=ntile(female_pc, 5)) #the 5 is the number of groups I want, so if I wanted quartiles instead, this number would be 4; if I wanted deciles, this number would be 10.
+```
+
+Let's look at our new variable.
+```{r}
+table(pd$female_pc_quint)
+```
+See how I have 5 equally sized groups? Group 1 represents counties up to the 20th percentile (for pct of female residents) across the data. Group 5 represents counties that are between the 80th and 100th percentile (or have the GREATEST proportions of females in their counties). Let's use this in a conditional mean now. 
+
+```{r}
+pd%>%
+  group_by(female_pc_quint)%>%
+  summarize(mean_homeown=mean(homeown_rate, na.rm=T))%>%
+  arrange(female_pc_quint)
+```
+While the mean homeownership rates aren't THAT different - we do see that counties with the lowest proportion of females (group 1) have slightly higher homeownership rates than counties with the highest proportion of females (group 5).
+
+P.S. Do NOT use this exact example in your homework, please. 
