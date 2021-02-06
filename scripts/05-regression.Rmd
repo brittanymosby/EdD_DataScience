@@ -5,13 +5,13 @@ output: html_document
 
 ## Overview
 
-So far, we've been using just the simple mean to make predictions. Today, we'll continue using the simple mean to make predictions, but now in a complicated way. Before, when we calculated conditional means, we did so in certain "groupings" of variables. When we run linear regression, we no longer need to do so. Instead, linear regression allows us to calculate the conditional mean of the outcome at _every_ value of the predictor. If the predictor takes on just a few values, then that's the number of conditional means that will be calculated. If the predictor is continuous and takes on a large number of values, we'statll still be able to calculate the conditional mean at every one of those values. 
+So far, we've been using just the simple mean to make predictions. Today, we'll continue using the simple mean to make predictions, but now in a complicated way. Before, when we calculated conditional means, we did so in certain "groupings" of variables. When we run linear regression, we no longer need to do so. Instead, linear regression allows us to calculate the conditional mean of the outcome at _every_ value of the predictor. If the predictor takes on just a few values, then that's the number of conditional means that will be calculated. If the predictor is continuous and takes on a large number of values, we'll still be able to calculate the conditional mean at every one of those values. 
 
 The model we posit for regression is as follows:
 
 $$Y=\beta_0+\beta_1 x_1 +\beta_2 x_2+ ... \beta_k x_k + \epsilon$$
 
-It's just a linear, additive model. Y increases or decreases as a function of x, with multiple x's included. $\epsilon$ is the extent to which an individual value is above or below the line created. 
+It's just a linear, additive model. $Y$ increases or decreases as a function of $x$, with multiple $x$'s included. The $\epsilon$ term is the extent to which an individual value is above or below the line created. 
 
 Let's say that you've got some student data and you want to target those students that may struggle in math. The intervention could be targeted based on what we know about students, much of which reflects broader inequalities in our education system, such as the relationship between SES and parental education and test scores. By intervening early we may help to reduce those inequalities. 
 
@@ -33,7 +33,7 @@ load("els_train.RData")
 
 ## Bivariate regression
 
-Our dependent variable will be math scores, stored in this dataset as `bynels2m`. Let's take a look at this variable
+Our dependent variable will be math scores, stored in this dataset as `bynels2m`. Let's take a look at this variable first.
 
 ```{r}
 els_train%>%summarize(mean(bynels2m,na.rm=TRUE))
@@ -73,7 +73,7 @@ rmse_1<-modelr::rmse(mod1,els_train);rmse_1
 
 ```
 
-What this shows is that as socio-economic status increases, math scores are predicted to increase. For every one unit increase in SES, math scores are predicted to increase by \$`r prettyNum(mod1$coefficients[2],digits=0)`. The rmse of `r  prettyNum(rmse_1,digits=2)` gives us a sense of how wrong the model tends to be when using just this one predictor. 
+What this shows is that as socio-economic status increases, math scores are predicted to increase. For every one unit increase in SES, math scores are predicted to increase by `r prettyNum(mod1$coefficients[2],digits=0)`. The rmse of `r  prettyNum(rmse_1,digits=2)` gives us a sense of how wrong the model tends to be when using just this one predictor. 
 
 _Quick Exercise_ Run a regression using a different predictor. Calculate rmse and see if you can beat my score. 
 
@@ -98,11 +98,11 @@ rmse_2<-modelr::rmse(mod2,els_train); rmse_2
 
 This finding reflects the basic inequity in our education system: lower income students score lower on math scores. This holds true even if we control for parental education. 
 
-_Quick Exercise_ Add another variable to your model from above and see what difference it makes. How is your RMSE? 
+_Quick Exercise_ Add another variable to your model from above and see what difference it makes. How is your rmse? 
 
 ## Transformations
 
-The `byses` variable is a little hard to interpret. It's on a scale from -2 to 2, which you should remember as the scale for a standardized variable or Z score. Let's transform it to be on a percentile scale from 0-100.
+The `byses` variable is a little hard to interpret. It's on a scale from -2 to 2, which you should remember as the scale for a standardized variable or Z-score. Let's transform it to be on a percentile scale from 0-100.
 
 ```{r}
 els_train<-els_train%>%mutate(byses_p=percent_rank(byses1)*100)
@@ -116,7 +116,7 @@ mod3<-lm(bynels2m~byses_p+
          );summary(mod3)
 ```
 
-This changes the coefficient AND its interpretation. Now, for every one percent increase in SES, math scores are predicted to increase by `r round(mod3$coefficients[2],2)`. Linear transformations will not change the statistical significance (t value), but non linear transformations like the one we just did will, as you can see. Does this change the RMSE? 
+This changes the coefficient AND its interpretation. Now, for every one percent increase in SES, math scores are predicted to increase by `r round(mod3$coefficients[2],2)`. Linear transformations will not change the statistical significance (t value), but non linear transformations like the one we just did will, as you can see. Does this change the rmse? 
 
 ```{r}
 rmse_3<-modelr::rmse(mod3,els_train)
