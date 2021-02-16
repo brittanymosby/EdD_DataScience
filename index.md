@@ -12,6 +12,11 @@ These are the RStudio files and datasets that you will use in tandem with the As
   - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement)
 5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata) (*Note, you may want to review notes from Applied Stats on correlation and regression.*)
 
+### Live Session PPT Files
+- [Week 2](./powerpt/Week 2 Overview and Review.pptx)
+- [Week 3](./powerpt/Week 3 Overview and Review.pptx)
+- [Week 5](./powerpt/Week 5 Overview and Review.pptx)
+
 ### Known Bugs/Issues in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
 - Week 4 - Please see above for supplementary material to fix issues with the Excel file download in async
