@@ -26,7 +26,14 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | [Assignment 2](./assignments/02-assignment.Rmd) | Tuesday 1/26, 12 noon (CT) |
 | [Assignment 3](./assignments/03-assignment.md) | Tuesday 2/2, 12 noon (CT) |
 | [Assignment 4](./assignments/04-assignment.md) | Tuesday 2/9, 12 noon (CT) |
-| [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16. 12 noon (CT) |
+| [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16, 12 noon (CT) |
+
+## Final Project
+The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually. Progress reports and their due dates are listed below.
+
+| Progress Report      | Due Date      |
+|:------------|:--------------|
+|[PR #1](./final_project/01-progress_report.md) | Monday 2/22, 7:30 pm (CT) |
 
 ## RStudio Reference Guides
 A non-exhaustive list of some of my favorite cheat sheets and guides for RStudio
