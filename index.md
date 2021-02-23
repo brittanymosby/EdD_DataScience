@@ -11,6 +11,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
   - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement)
 5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata) (*Note, you may want to review notes from Applied Stats on correlation and regression.*)
+6. Week 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplot.Rmd). [ELS full data](./scripts/els.Rdata)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
