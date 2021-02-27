@@ -9,9 +9,10 @@ These are the RStudio files and datasets that you will use in tandem with the As
   - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
 3. Week 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
 4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
-  - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement)
+  - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement.Rmd)
 5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata) (*Note, you may want to review notes from Applied Stats on correlation and regression.*)
 6. Week 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplots.Rmd), [ELS full data](./scripts/els.Rdata)
+7. Week 7 - [Getting Data: Web Sources](./scripts/07-webscraping.Rmd)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
