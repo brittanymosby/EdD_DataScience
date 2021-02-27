@@ -34,6 +34,7 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | [Assignment 4](./assignments/04-assignment.md) | Tuesday 2/9, 12 noon (CT) |
 | [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16, 12 noon (CT) |
 | [Assignment 6](./assignments/06-assignment.md) | Tuesday 2/23, 12 noon (CT) |
+| [Assignment 7](./assignments/07-assignment.md) | Tuesday 3/2, 12 noon (CT) |
 
 ## Final Project
 The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually. Progress reports and their due dates are listed below.
