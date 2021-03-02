@@ -12,7 +12,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
   - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement.Rmd)
 5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata) (*Note, you may want to review notes from Applied Stats on correlation and regression.*)
 6. Week 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplots.Rmd), [ELS full data](./scripts/els.Rdata)
-7. Week 7 - [Getting Data: Web Sources](./scripts/07-webscraping.Rmd)
+7. Week 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) **This is the newest version, that matches Live Session from this week**
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
