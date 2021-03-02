@@ -10,9 +10,9 @@ These are the RStudio files and datasets that you will use in tandem with the As
 3. Week 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
 4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
   - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement.Rmd)
-5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata) (*Note, you may want to review notes from Applied Stats on correlation and regression.*)
+5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata)
 6. Week 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplots.Rmd), [ELS full data](./scripts/els.Rdata)
-7. Week 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) **This is the newest version, that matches Live Session from this week**
+7. Week 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) (**This is the newest version, that matches Live Session from this week**)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
@@ -35,7 +35,7 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | [Assignment 4](./assignments/04-assignment.md) | Tuesday 2/9, 12 noon (CT) |
 | [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16, 12 noon (CT) |
 | [Assignment 6](./assignments/06-assignment.md) | Tuesday 2/23, 12 noon (CT) |
-| [Assignment 7](./assignments/07-assignment.md) | Tuesday 3/2, 12 noon (CT) |
+| [Assignment 7](./assignments/07-assignment.md) | TBA |
 
 ## Final Project
 The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually. Progress reports and their due dates are listed below.
