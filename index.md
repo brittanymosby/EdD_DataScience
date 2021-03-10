@@ -13,7 +13,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 5. Module 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata)
 6. Module 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplots.Rmd), [ELS full data](./scripts/els.Rdata)
 7. Module 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) (**This is the newest version, that matches Live Session from this week**)
-8. Module 8 - [Classification](./scripts/08-classification.Rmd) ([Here](https://degreesofbelief.roryquinn.com/common-evaluation-measures-for-classification-models) is a good link for understanding the confusion matrix.)
+8. Module 8 - [Classification](./scripts/08-classification.Rmd) ([Here](https://degreesofbelief.roryquinn.com/common-evaluation-measures-for-classification-models) is another good link for understanding the confusion matrix.)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
