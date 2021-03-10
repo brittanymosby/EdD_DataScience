@@ -1,7 +1,7 @@
 ---
 title: "Classification"
 author: "Will Doyle"
-output: github_document
+output: html_document
 ---
 
 Classification is the process of predicting group membership. Understanding which individuals are likely to be members of which groups is a key task for data scientists. For instance, most recommendation engines that are at the hear of consumer web sites are based on classification algorithms, predicting which consumers are likely to purchase which products. 
@@ -123,29 +123,30 @@ lm_mod<-lm(got_pizza~
            data=za_train,y=TRUE,na.exclude=TRUE);summary(lm_mod)
 ```
 
-We're going to do something a bit different with the predictions from this model. After creating predictions, we're going to classify everyone with a predicted probablity above .5 as being predicted to get a pizza, while everyone with a predicted probability below .5 is predicted to not get one. We'll compare our classifications with the actual data. 
+We're going to do something a bit different with the predictions from this model. After creating predictions, we're going to classify everyone with a predicted probability above .5 as being predicted to get a pizza, while everyone with a predicted probability below .5 is predicted to not get one. We'll compare our classifications with the actual data. 
 
 ```{r}
 #Predictions
 za_train<-za_train%>%
   add_predictions(lm_mod)%>% ## Add in predictions from the model
   rename(pred_lm=pred)%>% ## rename to be predictions from ols (lm)
-  mutate(pred_lm_out=ifelse(pred_lm>=.5,1,0)) ## Create predictied classification, 1 if above .5
+  mutate(pred_lm_out=ifelse(pred_lm>=.5,1,0)) ## Create predicted classification, 1 if above .5
 ```
 
 Let's create a table that shows the predictions of our model against what actually happened
 ```{r}
 pred_table<-table(za_train$got_pizza,za_train$pred_lm_out)
+rownames(pred_table)<-c("Predicted 0","Predicted 1")
+colnames(pred_table)<-c("Actually 0","Actually 1")
 
 pred_table
 
 prop.table(pred_table)
-rownames(pred_table)<-c("Predicted 0","Predicted 1")
-colnames(pred_table)<-c("Actually 0","Actually 1")
+
 ```
 
 ```{r}
-confusionMatrix(as_factor(za_train$got_pizza),as_factor(za_train$pred_lm_out))
+confusionMatrix(as_factor(za_train$got_pizza),as_factor(za_train$pred_lm_out), positive = "1")
 ```
 
 
@@ -156,7 +157,7 @@ We're usually interested in three things: the overall accuracy of a classificati
 *Question: how do you get perfect specificity? How do you get 
 perfect sensitivity?*
 
-There are several well-known problems with linear regression as a classification algortihm. Two should give us pause: it can generate probabilites outside of 0,1 and it implies a linear change in probabilities as a function of the predictors which may not be justified given the underlying relationship between the predictors and the probability that the outcome is 1. Logistic regresssion should give a better predicted probability, one that's more sensitive to the actual relationship between the predictors and the outcome. 
+There are several well-known problems with linear regression as a classification algortihm. Two should give us pause: it can generate probabilities outside of 0,1 and it implies a linear change in probabilities as a function of the predictors which may not be justified given the underlying relationship between the predictors and the probability that the outcome is 1. Logistic regression should give a better predicted probability, one that's more sensitive to the actual relationship between the predictors and the outcome. 
 
 ## Logistic regression as a classifier
 
@@ -194,7 +195,7 @@ za_train<-za_train%>%
 
 Now we create a confusion matrix to see how we did. 
 ```{r}
-confusionMatrix(data=as_factor(za_train$pred_logit_out),reference=as_factor(za_train$got_pizza))
+confusionMatrix(data=as_factor(za_train$pred_logit_out),reference=as_factor(za_train$got_pizza), positive = "1")
 ```
 
 ## Applying predictions to the testing dataset.
@@ -208,7 +209,7 @@ za_test<-za_test%>%
   mutate(pred_logit=predict(logit_mod,newdata=.,type="response"))%>%
       mutate(pred_logit_out=ifelse(pred_logit>=.5,1,0))
 
-confusionMatrix(data=as_factor(za_test$pred_logit_out),reference=as_factor(za_test$got_pizza))
+confusionMatrix(data=as_factor(za_test$pred_logit_out),reference=as_factor(za_test$got_pizza), positive = "1")
 ```
 
 ## Thinking about classifiers
