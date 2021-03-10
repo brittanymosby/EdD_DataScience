@@ -4,15 +4,16 @@ This is the supplementary page for Professor Mosby's section of LLO 8200 Introdu
 
 ## Async Lecture RStudio (.Rmd) Files
 These are the RStudio files and datasets that you will use in tandem with the Async lecture videos each week.
-1. Week 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/college.Rdata)
-2. Week 2 - [Conditional Means](./scripts/02_conditional_means.Rmd), [Student Debt datafile](./scripts/sc_debt.Rdata)
+1. Module 1 - [Introduction](./scripts/01-intro.Rmd), [College datafile](./scripts/college.Rdata)
+2. Module 2 - [Conditional Means](./scripts/02_conditional_means.Rmd), [Student Debt datafile](./scripts/sc_debt.Rdata)
   - **New video instructions:** First, watch 2.1 in the LMS; then, watch “conditional means part 1” (posted to course wall) and then “conditional means part 2” (posted to course wall). These videos will direct you when to watch LMS sections 2.7 and 2.8.
-3. Week 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
-4. Week 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
+3. Module 3 - [Plotting Conditional Means](./scripts/03-plot_means.Rmd), [Attrition datafile](./scripts/attrition.Rdata)
+4. Module 4 - [Getting Data: Flat Files and Tidy Data](./scripts/04-flat_data.Rmd)
   - Fixes for async and broken links in HW: [Week 4 Supplement](./scripts/04-supplement.Rmd)
-5. Week 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata)
-6. Week 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplots.Rmd), [ELS full data](./scripts/els.Rdata)
-7. Week 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) (**This is the newest version, that matches Live Session from this week**)
+5. Module 5 - [Using Regression for Prediction](./scripts/05-regression.Rmd), [ELS training data](./scripts/els_train.Rdata), [ELS testing data](./scripts/els_test.Rdata)
+6. Module 6 - [Plotting Linear Regression with Scatterplots](./scripts/06-scatterplots.Rmd), [ELS full data](./scripts/els.Rdata)
+7. Module 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) (**This is the newest version, that matches Live Session from this week**)
+8. Module 8 - [Classification](./scripts/08-classification.Rmd)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
