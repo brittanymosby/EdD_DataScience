@@ -29,20 +29,22 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 
 | File      | Due Date          |
 |:-------------|:------------------|
-| [Assignment 1](./assignments/01-assignment.Rmd) | Sunday 1/17, 12 noon (CT) |
-| [Assignment 2](./assignments/02-assignment.Rmd) | Tuesday 1/26, 12 noon (CT) |
-| [Assignment 3](./assignments/03-assignment.md) | Tuesday 2/2, 12 noon (CT) |
-| [Assignment 4](./assignments/04-assignment.md) | Tuesday 2/9, 12 noon (CT) |
-| [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16, 12 noon (CT) |
-| [Assignment 6](./assignments/06-assignment.md) | Tuesday 2/23, 12 noon (CT) |
-| [Assignment 7](./assignments/07-assignment.md) | TBA |
+| [Assignment 1](./assignments/01-assignment.Rmd) | Sunday 1/17 |
+| [Assignment 2](./assignments/02-assignment.Rmd) | Tuesday 1/26 |
+| [Assignment 3](./assignments/03-assignment.md) | Tuesday 2/2 |
+| [Assignment 4](./assignments/04-assignment.md) | Tuesday 2/9 |
+| [Assignment 5](./assignments/05-assignment.md) | Tuesday 2/16 |
+| [Assignment 6](./assignments/06-assignment.md) | Tuesday 2/23 |
+| [Assignment 7](./assignments/07-assignment.md) | Saturday 3/13 |
 
 ## Final Project
 The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually. Progress reports and their due dates are listed below.
 
 | Progress Report      | Due Date      |
 |:------------|:--------------|
-|[PR #1](./final_project/01-progress_report.md) | Monday 2/22, 7:30 pm (CT) |
+|[PR #1](./final_project/01-progress_report.md) | Monday 2/22 |
+|[PR #2](./final_project/02-progress_report.md) | Week of 3/22 |
+|PR #3 | Week of 4/5 |
 
 ## RStudio Reference Guides
 A non-exhaustive list of some of my favorite cheat sheets and guides for RStudio
