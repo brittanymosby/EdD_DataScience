@@ -1,0 +1,144 @@
+---
+title: "Plots for Classifiers"
+output: html_document
+---
+
+Plots are rarely used in the context of classification, but they can aid understanding the behavior of the dependent variable. I'll show three ways of thinking about plots for classification: bar graphs, heatmaps, and plotting the probability predictions from a logit model.
+
+
+We'll continue working with the Random Acts of Pizza dataset. 
+
+```{r}
+library(tidyverse)
+library(modelr)
+library(knitr)
+load("za.RData")
+```
+
+We always want to start with a cross tab of our dependent variable as a function of other variables. We structure crosstabs in a very particular way for the purposes of research: the independent variable goes on the rows, and the dependent variable goes on the columns. If proportions or percentages are going to be calculated, they should be calculated across rows. 
+
+Recalling our previous lesson, let's look at a crosstab of the dependent, binary variable `got_pizza` with the independent variable of `student`
+
+```{r}
+#Note the order: rows first (independent variable), followed by columns (dependent variable).
+tab_student<-with(za,table(student,got_pizza))
+tab_student
+```
+
+If we want to make this a little better, we can change the row and column titles
+
+```{r}
+colnames(tab_student)<-c("No Pizza","Received a Pizza")
+tab_student
+
+kable(tab_student) #recall that a kable is a markdown formatted table, and particularly recommended for use in reports
+```
+
+If we want to add proportions to this table, we can do that like so:
+```{r}
+tab_student_prop<-prop.table(tab_student,margin=1)
+kable(tab_student_prop)
+```
+
+Sometimes (okay, all the times) audiences prefer percentages. Easy enough to do:
+```{r}
+kable(round(tab_student_prop*100,2))
+```
+
+If you want to include a third variable in a crosstab, that requires splitting the dataset. For instance, if we want to know the proportion of posts that include "student" AND "grateful" that received pizza, we would do this:
+
+```{r}
+#filter only data that had the word grateful in the post:
+tab_student_grateful<-with(filter(za,
+                           as.character(grateful)=="Grateful in post"),
+                           table(student,got_pizza))
+tab_student_grateful
+```
+Note that this table represents *only* the posts that contained "grateful."
+
+*Outcome by "Student" AND "Grateful"*
+```{r}
+prop.table(tab_student_grateful,margin=1)%>%kable()
+```
+
+
+## Barcharts
+
+To format the data for barcharts, we make use of the concept of conditional means. Let's use two independent variables to calculate the probability of receiving a pizza: poor and student. 
+
+```{r}
+#This is similar to code from weeks 3 and 4 for calculating and graphing conditional means
+za_sum<-za%>%group_by(poor,student)%>%dplyr::summarize(prob_pizza=mean(got_pizza,na.rm=TRUE))
+
+gg1<-ggplot(za_sum,aes(x=student,y=prob_pizza,fill=poor))
+gg1<-gg1+geom_bar(stat="identity",position="dodge")
+gg1<-gg1+xlab("Student Status")+ylab("Pr(Pizza)")
+gg1<-gg1+theme(legend.title=element_blank())
+gg1<-gg1+geom_text(aes(label=round(prob_pizza,2)),
+                   position=position_dodge(width=.9),
+                   vjust=-.25)
+gg1
+```
+Which group was most likely to get pizza? Least likely?
+
+## Heat Maps
+
+```{r}
+za<-za%>%mutate(score_decile=ntile(score,5),
+                karma_decile=ntile(karma,5))
+
+
+za_sum<-za%>%group_by(score_decile,karma_decile)%>%
+  dplyr::summarize(prob_pizza=mean(got_pizza,na.rm=TRUE))%>%
+  arrange(-prob_pizza)
+
+za_sum<-za_sum%>%dplyr::filter(!(is.na(score_decile)),!(is.na(karma_decile)))
+
+#The usual setup for a gg plot that specifies the data, x- and y-values, and the fill aesthetics
+gg<-ggplot(za_sum,
+           aes(x=as.factor(score_decile),
+               y=as.factor(karma_decile),fill=prob_pizza))
+gg<-gg+geom_tile() #This geometry will plot the date as a grid, where the color of each cell corresponds to the likelihood of getting pizza
+gg<-gg+scale_fill_gradient(low="white",high="red")
+gg<-gg+xlab("Emotional Valence")+ylab("Reddit Karma")
+gg<-gg+theme(legend.title=element_blank())
+gg
+
+```
+
+
+## Plotting by probabilities from models
+```{r}
+#Definining a logistic regression model with independent variables karma, total posts, RAOP posts, student, and grateful
+logit_mod<-glm(got_pizza~
+             karma+
+             total_posts+
+             raop_posts+
+             student+
+             grateful,
+             data=za,
+            na.action=na.exclude,
+            family=binomial(link="logit"),
+               y=TRUE)
+
+```
+
+
+
+```{r}
+#Creating a hypothetical, representative dataset to create a graphical representation of the model
+hypo_data<-data_grid(za, 
+                     total_posts=seq_range(total_posts,n=100),
+                                           karma=mean(karma,na.rm=TRUE),
+                                           raop_posts=mean(raop_posts,na.rm=TRUE),
+                     grateful=levels(grateful)[1],
+                                           student=levels(student))%>%
+              mutate(pred=predict(logit_mod,newdata=.,type="response"))
+
+gg<-ggplot(hypo_data,
+           aes(x=total_posts,y=pred,color=student))
+gg<-gg+geom_line()
+gg<-gg+xlab("Total Posts")+ylab("Predicted Probability of Pizza")
+gg
+```
+

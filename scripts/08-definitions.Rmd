@@ -1,0 +1,64 @@
+---
+title: "Classification Basics"
+author: "BL Mosby"
+date: "3/9/2021"
+output: html_document
+---
+
+## Logistic Regression
+In logistic regression we are estimating the probability an event occurs, given a linear combination of independent variables. This works best for discrete, unordered dependent variables. On its own, logistic regression is not a classification method, but can be used as the first step in a classification algorithm.
+
+*A review of probability and odds*: Consider a random event with one of two outcomes where $$P(Y=1) = p$$ and $$P(Y=0) = q \text{ or } 1-p$$
+Then the **odds for** the event is the ratio $$p/q \text{ or } p:q$$
+This will always be a number greater than 0. Example: The probability of rain on a given day is 80%. What are the odds of rain? Answer- $$\frac{.80}{.20}=\frac{4}{1}$$ or also displayed as 4:1, read "four-to-one."
+
+Odds are thought to be a more intuitive representation of the likelihood of a binary outcome. The **log-odds** are the natural logarithm $\ln(x)$ of the odds of an event: $\ln(p/q)$. For an event with two equally likely outcomes, the odds are 1:1 and the log-odds are 0. If the event is more likely to NOT occur, the odds will be a fraction, and the log-odds will be negative. If the event is more likely TO occur, the odds will be greater than 1, and the log-odds will be positive. Mathematically, this allows us to map the probability space [0,1] to any real number, which is particularly useful for classifying a binary event based on a set of independent variables which may be discrete or continuous.
+
+Similar to linear regression, logistic regression is the process of finding coefficients $\beta$ for the logistic expression $$\ln(p/q) = \beta_0
++ \sum(\beta_i x_i)$$ where p and q are defined as above. This equation describes the relationship between the independent variables and the log-odds of the dependent variable. Hence, logistic regression returns a set of probabilities for each observation. To use this to classify the dependent variable, set a threshold value (typically start with 0.5) to sort positive and negative cases. See [here](https://en.wikipedia.org/wiki/Logistic_regression#Probability_of_passing_an_exam_versus_hours_of_study) for an interesting example of how logistic regression can be used to predict the probability of passing an exam, based on hours of study.
+
+---
+
+## Confusion Matrix
+The confusion matrix (or error matrix) is a set of measures that can be used to assess the model fit of a classifier. The terms below are commonly used in classification and prediction, and can be thought of as marginal probabilities from the 2X2 contingency table of predictions and actual results: true positive, false positive, true negative, and false negative. (N.B. recall from applied stats that a false positive is equivalent to a Type I error, and a false negative is the same as a Type II error.)
+
+- **Accuracy**: Percentage of correctly classified cases overall. $$\frac{TP+TN}{total}$$
+- **No information rate (NIR)**: the highest accuracy possible if every case is classified as the largest class. In general, a good model will have an accuracy that is greater than the no information rate.
+- **Positive prediction value (PPV)**: Also called the *precision*, the percentage of correctly classified positive cases, given a positive prediction. $$\frac{TP}{TP+FP}$$
+- **Negative prediction value (NPV)**: Percentage of correctly classified negative cases, given a negative prediction. $$\frac{TN}{TN+FN}$$
+- **Sensitivity**: Also referred to as the *recall* or *true positive rate*, the percentage of correctly classified positive cases, given the case was actually positive. $$\frac{TP}{TP+FN}$$
+- **Specificity**: Also called the *selectivity* or *true negative rate*, the percentage of correctly classified negative cases, given the case was actually negative. $$\frac{TN}{TN+FP}$$
+- **Balanced accuracy**: the mean of sensitivity and specificity.
+
+In the "Got Pizza?" example, the confusion matrix for the logistic classifier is as follows:
+
+               Accuracy : 0.7563          
+                 95% CI : (0.7401, 0.7721)
+    No Information Rate : 0.9891          
+    P-Value [Acc > NIR] : 1               
+                                          
+            Sensitivity : 0.645161        
+            Specificity : 0.757576        
+         Pos Pred Value : 0.028571        
+         Neg Pred Value : 0.994850        
+             Prevalence : 0.010931        
+         Detection Rate : 0.007052        
+
+
+Overall, based on the independent variables of Reddit karma, total posts, posts in the pizza subreddit, if the post includes "student", and it includes "grateful," our logistic classifier has 75.6% accuracy. This may seem promising, however: once we compare to the NIR, we see that we can get very near perfect accuracy by classifying every case as 0 or did not get pizza. In fact, the p-value is 1 for a hypothesis test with alternative hypothesis $$H_1: ACC>NIR$$ essentially indicating there is no evidence to support the conclusion that the accuracy for this classifier is greater than the no information rate. Yikes!
+
+Additionally, examining the PPV and NPV reveals that this classifier has much better negative predictive power (99.5%) compared to positive predictive power (2.9%). Meaning this classifier is much better at identifying posts that did not get pizza: 99.5% of the time the classifier predicted no pizza, it was correct. The sensitivity shows about two-thirds of posts that actually got pizza were correctly classified; and three-fourths of posts that did not get pizza were correctly classified, again pointing to the greater confidence in negative predictions over positive ones.
+
+In all, we would conclude that this model (the logistic regression with the five specified independent variables) is NOT a good fit for the data.
+
+Other post-hoc measures of model fit that you may see in literature and practice include:
+
+- False discovery rate is the probability of false positive result out of all predicted positive cases. Equivalent to 1-PPV.
+- False omission rate is the probability of false negative result out of all predicted negative cases. Equivalent to 1-NPV.
+- False negative or miss rate is the probability of a false negative out of all actually positive cases. Equivalent to 1-sensitivity.
+- False positive or false alarm rate is the probability of a false positive out of all the actually negative cases. Equivalent to 1-specificity.
+
+
+
+
+
