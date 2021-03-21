@@ -15,6 +15,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 7. Module 7 - [Getting Data: Web Sources](./scripts/07-webscraping-NEW.Rmd) (**This is the newest version, that matches Live Session from this week**)
 8. Module 8 - [Classification](./scripts/08-classification.Rmd), [Za training file](./scripts/za_train.RData), [Za testing file](./scripts/za_test.RData)
   - ([Here](https://degreesofbelief.roryquinn.com/common-evaluation-measures-for-classification-models) is another good link for understanding the confusion matrix.)
+9. Module 9 - [Plotting for Classification](./scripts/09-plots_classification-NEW.Rmd), [Za data file](./scripts/za.RData)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
@@ -26,7 +27,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
 - Week 4 - Please see above for supplementary material to fix issues with the Excel file download in async
 - Week 5 - Async exercise 5.2 is referring to a dataset from a previous version of this lecture. Please skip this question for now.
-- Week 8 - The async exercises appear to be referencing the Attrition data set from a previous lecture. Please skip these for now.
+- Weeks 8-9 - The async exercises appear to be referencing the Attrition data set from a previous lecture. Please skip these for now.
 
 ## Assignments
 Each assignment (problem set) is worth 100 points. The problem sets are due on the Sunday prior to the following week’s live session. All assignment submissions must include both the .Rmd file and a knitted file (html, doc, or pdf). There may be a penalty for submissions not meeting this requirement.
