@@ -16,6 +16,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
 8. Module 8 - [Classification](./scripts/08-classification.Rmd), [Za training file](./scripts/za_train.RData), [Za testing file](./scripts/za_test.RData)
   - ([Here](https://degreesofbelief.roryquinn.com/common-evaluation-measures-for-classification-models) is another good link for understanding the confusion matrix.)
 9. Module 9 - [Plotting for Classification](./scripts/09-plots_classification-NEW.Rmd), [Za data file](./scripts/za.RData)
+10. Module 10 - [Crossfold Validation](./scripts/10-cross_validation-NEW.Rmd)
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
@@ -43,6 +44,7 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | [Assignment 7](./assignments/07-assignment.md) | Saturday 3/13 |
 | [Assignment 8](./assignments/08-assignment.md) | Saturday 3/20 |
 | [Assignment 9](./assignments/09-assignment.md) | Saturday 3/27 |
+| [Assignment 10] (./assignments/10-assignment.md) | Saturday 4/3 |
 
 ## Final Project
 The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually. Progress reports and their due dates are listed below.
