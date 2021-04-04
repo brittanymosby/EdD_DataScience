@@ -48,7 +48,8 @@ Each assignment (problem set) is worth 100 points. The problem sets are due on t
 | [Assignment 10](./assignments/10-assignment.md) | Saturday 4/3 |
 
 ## Final Project
-The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually. Progress reports and their due dates are listed below.
+The final project for this course will entail utilizing techniques learned over the semester to answer a research question with data of your choosing. You may work in groups of up to three people, or individually.
+[Rubric for the final project](./final_project/final_project_rubric.md)
 
 | Progress Report      | Due Date      |
 |:------------|:--------------|
