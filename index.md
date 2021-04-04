@@ -17,6 +17,7 @@ These are the RStudio files and datasets that you will use in tandem with the As
   - ([Here](https://degreesofbelief.roryquinn.com/common-evaluation-measures-for-classification-models) is another good link for understanding the confusion matrix.)
 9. Module 9 - [Plotting for Classification](./scripts/09-plots_classification-NEW.Rmd), [Za data file](./scripts/za.RData)
 10. Module 10 - [Crossfold Validation](./scripts/10-cross_validation-NEW.Rmd)
+11. Module 11 - [Databases](./scripts/11-databases.Rmd)  - **This is optional,** and for those who mentioned being interested in databases because of their work.
 
 ### Live Session PPT Files
 - [Week 2](./powerpt/Week 2 Overview and Review.pptx)
