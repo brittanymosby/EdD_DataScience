@@ -54,7 +54,7 @@ The final project for this course will entail utilizing techniques learned over 
 |:------------|:--------------|
 |[PR #1](./final_project/01-progress_report.md) | Monday 2/22 |
 |[PR #2](./final_project/02-progress_report.md) | Week of 3/22 |
-|PR #3 | Week of 4/5 |
+|[PR #3](./final_project/03-progress_report.md) | Week of 4/12 |
 
 ## RStudio Reference Guides
 A non-exhaustive list of some of my favorite cheat sheets and guides for RStudio
