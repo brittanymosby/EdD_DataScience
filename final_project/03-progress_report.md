@@ -1,11 +1,8 @@
 Progress Report 3
 ====================
 
-For this progress report, I need the following in an .Rmd file:
+For this progress report, you will need to add the following to your Progress report 2 .Rmd file:
 
-1. Code that accesses a dataset that contains your dependent variable and most of your relevant independent variables. 
-2. A univaraiate graphic describing the dependent variable.
+1.Results and brief discussion of **two different analyses** that predict your dependent variable (conditional means, regression, classification)
 
-3. Results and brief discussion of two different analyses that predict your dependent variable (conditional means, regression, classification)
-4. Two graphics (or tables) that show the results of your analyses above.
-
+2. Two graphics (or tables) that show the results of your analyses above.
