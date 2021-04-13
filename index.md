@@ -22,10 +22,11 @@ These are the RStudio files and datasets that you will use in tandem with the As
 13. Module 13 - [Creating Interactive Graphics with 'plotly'](./scripts/13-interactive_graphics.Rmd) (**Optional, but recommended**)
 
 ### Live Session PPT Files
-- [Week 2](./powerpt/Week 2 Overview and Review.pptx)
-- [Week 3](./powerpt/Week 3 Overview and Review.pptx)
-- [Week 5](./powerpt/Week 5 Overview and Review.pptx)
-- [Week 8](./powerpt/Week 8 Overview and Review.pptx)
+- [Week 2](./powerpt/Week-2ppt.pptx)
+- [Week 3](./powerpt/Week-3ppt.pptx)
+- [Week 5](./powerpt/Week-5ppt.pptx)
+- [Week 8](./powerpt/Week-8ppt.pptx)
+- [Semester Overview](./powerpt/Full-Review.pptx)
 
 ### Known Bugs/Issues in Async Lecture
 - Week 1 - The answer for async exercise 1.7 (UNC admission rate) should be .34 or 34%.
