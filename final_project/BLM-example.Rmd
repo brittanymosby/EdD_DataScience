@@ -1,0 +1,36 @@
+---
+title: "Predicting Student Success"
+author: "BL Mosby"
+date: "LLO 8200"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#Use this first code chunk to load any libraries and data you will be using.
+```
+
+## Introduction
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see the guide on our class [Github page](https://brittanymosby.github.io/edd_datascience/assets/rmarkdown-reference.pdf). Your introduction section should explain the research project, the data, and how you will use the data to answer your research question. Note that only the **Title** should be level 1. Other document text (intro, analysis, recommendations) should be plain text, and not a header level.
+
+When you **knit**, a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+#Each code chunk should have comments that briefly explain the commands/expected output-- however DO NOT provide analysis as a comment.
+
+#Summary statistics for dataset
+summary(cars)
+```
+
+## Graphical Analysis
+
+Text outside of code chunks should be narrative analyzing the output. This should be plain text (i.e. no #header text). Note that the `echo = FALSE` parameter is added to the code chunk below to prevent printing of the R code that generated the plot, so only the graph shows. You can also give code chunks names (like the one below is `pressure` to organize your code.)
+
+```{r pressure, echo=FALSE}
+#This comment will not show in the knitted document, since I added `echo=FALSE` to the code chunk.
+plot(pressure)
+```
+
+### Subsection
+For subsections, increase the header level by adding another pound sign. 
